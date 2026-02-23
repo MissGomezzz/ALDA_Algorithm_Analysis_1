@@ -109,6 +109,20 @@ This problem has the following characteristics:
 
 ## Algorithm #5 - Quick sort 
 
+This problem has the following characteristics:
+
+  Quick Sort
+
+  Best Case:    O(n log n)
+  
+  Average Case: O(n log n)
+  
+  Worst Case:   O(n^2)      when the pivot is bad 
+  
+  Space:        O(log n)    using recursion 
+  
+  Stable:       No
+
 
 ## Examples
 
