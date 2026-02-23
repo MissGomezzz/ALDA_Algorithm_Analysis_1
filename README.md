@@ -7,13 +7,24 @@ This mini project chooses and analyses 5 sorting algorithms using graphs generat
 
 In here we will take a look also at different coding components such as algorithms, constants, data generators and execution time gathering. 
 
-## Problem statement 1
+You will find a src file that contains the main modules, including the sorting algorithms chosen (bubble sort, selection sort, insertion sort, merge sort and quick sort), the random generator of data and more. 
 
+In order to compare all the sorting techniques at the same time, only 1 graph is displayed for all the running times of the algorithms. 
+
+## Algorithm #1 - Bubble Sort
+
+This problem has the following characteristics:
+
+  Bubble Sort
+
+  Best Case:    O(n)        
+  Average Case: O(n^2)
+  Worst Case:   O(n^2)
+  Space:        O(1)
+  Stable:       Yes
 
 ## Examples
 
-
-## Graphs - Big O Notation 
 
 
 ## Test coverage 
@@ -21,52 +32,73 @@ In here we will take a look also at different coding components such as algorith
 
 ----
 
-## Problem statement 2
+## Algorithm #2 - Selection sort 
 
+This problem has the following characteristics:
+
+  Selection Sort
+
+  Best Case:    O(n^2)
+  Average Case: O(n^2)
+  Worst Case:   O(n^2)
+  Space:        O(1)
+  Stable:       No
+    
 
 ## Examples
-
-
-## Graphs - Big O Notation 
 
 
 ## Test coverage 
 
 ---
 
-## Problem statement 3
+## Algorithm #3 - Insertion sort
 
+This problem has the following characteristics:
+
+  Insertion Sort
+
+  Best Case:    O(n)
+  Average Case: O(n^2)
+  Worst Case:   O(n^2)
+  Space:        O(1)
+  Stable:       Yes
+   
 
 ## Examples
-
-
-## Graphs - Big O Notation 
 
 
 ## Test coverage 
 
 ---
 
-## Problem statement 4
+## Algorithm #4 - Merge Sort
 
+This problem has the following characteristics:
+  
+  Merge Sort
+
+  Best Case:    O(n log n)
+  Average Case: O(n log n)
+  Worst Case:   O(n log n)
+  Space:        O(n)
+  Stable:       Yes
 
 ## Examples
-
-
-## Graphs - Big O Notation 
 
 
 ## Test coverage 
 
 ---
 
-## Problem statement 5
+## Algorithm #5 - Quick sort 
 
 
 ## Examples
 
+---
 
-## Graphs - Big O Notation 
+## Graphs - Big O Notation + Analysis 
 
 
 ## Test coverage 
