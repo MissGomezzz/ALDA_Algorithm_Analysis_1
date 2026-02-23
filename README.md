@@ -17,10 +17,14 @@ This problem has the following characteristics:
 
   Bubble Sort
 
-  Best Case:    O(n)        
+  Best Case:    O(n)    
+  
   Average Case: O(n^2)
+  
   Worst Case:   O(n^2)
+  
   Space:        O(1)
+  
   Stable:       Yes
 
 ## Examples
@@ -39,9 +43,13 @@ This problem has the following characteristics:
   Selection Sort
 
   Best Case:    O(n^2)
+  
   Average Case: O(n^2)
+  
   Worst Case:   O(n^2)
+  
   Space:        O(1)
+  
   Stable:       No
     
 
@@ -59,9 +67,13 @@ This problem has the following characteristics:
   Insertion Sort
 
   Best Case:    O(n)
+  
   Average Case: O(n^2)
+  
   Worst Case:   O(n^2)
+  
   Space:        O(1)
+  
   Stable:       Yes
    
 
@@ -79,9 +91,13 @@ This problem has the following characteristics:
   Merge Sort
 
   Best Case:    O(n log n)
+  
   Average Case: O(n log n)
+  
   Worst Case:   O(n log n)
+  
   Space:        O(n)
+  
   Stable:       Yes
 
 ## Examples
