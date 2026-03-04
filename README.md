@@ -450,7 +450,7 @@ Also, the following results are shown along with the previous graph.
 
 ![alt text](/docs/images/processing_data.png)
 
-This means that the size of the arrays randomly generated have a max. size of 1000. There were 10 different input sizes, starting from 100, then 200... up to 10000. 
+This means that the size of the arrays randomly generated have a max. size of 1000. There were 10 different input sizes, starting from 100, then 200... up to 1000. 
 
 
 ---
