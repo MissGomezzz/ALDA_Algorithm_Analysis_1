@@ -17,7 +17,7 @@ Analyzing sorting algorithms using Big-O Notation.
 
 - [Algorithm #5](#algorithm-5---quick-sort)
 
-- [Results and Graphs - Anlaysis](#results-and-graphs---anlaysis)
+- [Results and Graphs - Analysis](#results-and-graphs---anlaysis)
 
 - [Test coverage](#test-coverage)
 
