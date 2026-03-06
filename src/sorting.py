@@ -12,16 +12,17 @@ def bubble_sort(arr):
     Stable:       Yes
     """
     n = len(arr)
-    arr = arr.copy()
+    arr = arr.copy()  # extra memory used only for copying input
 
-    for i in range(n):
+    for i in range(n):  # outer loop runs n times -> contributes to O(n)
         swapped = False
-        for j in range(0, n - i - 1):
+        for j in range(0, n - i - 1):  # inner loop runs up to n times
+            # nested loops (n * n) -> O(n^2) average and worst case
             if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]  # constant time swap
                 swapped = True
         if not swapped:
-            break
+            break  # early stop when already sorted -> best case becomes O(n)
 
     return arr
 
@@ -39,12 +40,13 @@ def selection_sort(arr):
     arr = arr.copy()
     n = len(arr)
 
-    for i in range(n):
+    for i in range(n):  # outer loop runs n times
         min_index = i
-        for j in range(i + 1, n):
+        for j in range(i + 1, n):  # inner loop scans remaining elements
+            # nested loops always execute fully -> always O(n^2)
             if arr[j] < arr[min_index]:
                 min_index = j
-        arr[i], arr[min_index] = arr[min_index], arr[i]
+        arr[i], arr[min_index] = arr[min_index], arr[i]  # constant time swap
 
     return arr
 
@@ -61,17 +63,23 @@ def insertion_sort(arr):
     """
     arr = arr.copy()
 
-    for i in range(1, len(arr)):
+    for i in range(1, len(arr)):  # outer loop runs n times
         key = arr[i]
         j = i - 1
 
-        while j >= 0 and arr[j] > key:
+        while j >= 0 and arr[j] > key:  
+            # shifting elements backwards can take up to n steps
+            # inside outer loop -> O(n^2) worst and average
             arr[j + 1] = arr[j]
             j -= 1
 
-        arr[j + 1] = key
+        arr[j + 1] = key  # insertion operation
+
+        # if array already sorted the while loop barely runs
+        # making the algorithm O(n) in best case
 
     return arr
+
 
 def merge_sort(arr):
     """
@@ -85,13 +93,14 @@ def merge_sort(arr):
     """
 
     if len(arr) <= 1:
-        return arr
+        return arr  # base case for recursion
 
     mid = len(arr) // 2
-    left = merge_sort(arr[:mid])
-    right = merge_sort(arr[mid:])
+    left = merge_sort(arr[:mid])   # recursive division -> creates log n levels
+    right = merge_sort(arr[mid:])  # each level splits the problem in half
 
-    return _merge(left, right)
+    return _merge(left, right)  
+    # merging processes all n elements per level -> n work * log n levels = O(n log n)
 
 
 def _merge(left, right):
@@ -99,15 +108,17 @@ def _merge(left, right):
     i = j = 0
 
     while i < len(left) and j < len(right):
+        # compares elements from both halves
+        # each element processed once -> contributes to O(n)
         if left[i] <= right[j]:
-            result.append(left[i])
+            result.append(left[i])  # append is constant time
             i += 1
         else:
             result.append(right[j])
             j += 1
 
-    result.extend(left[i:])
-    result.extend(right[j:])
+    result.extend(left[i:])   # adds remaining elements -> still linear
+    result.extend(right[j:])  # contributes to total O(n) merging cost
     return result
 
 
@@ -123,14 +134,24 @@ def quick_sort(arr):
     """
 
     if len(arr) <= 1:
-        return arr
+        return arr  # recursion base case
 
-    pivot = arr[len(arr) // 2]
-    left = [x for x in arr if x < pivot]
-    middle = [x for x in arr if x == pivot]
-    right = [x for x in arr if x > pivot]
+    pivot = arr[len(arr) // 2]  # pivot selection
 
+    left = [x for x in arr if x < pivot]   
+    # list comprehension scans entire array -> O(n)
+
+    middle = [x for x in arr if x == pivot]  
+    # another full scan -> O(n)
+
+    right = [x for x in arr if x > pivot]  
+    # another full scan -> O(n)
+
+    # recursive calls split the array roughly in half
+    # producing log n recursion depth in average case
     return quick_sort(left) + middle + quick_sort(right)
+    # n work per level * log n levels -> O(n log n)
+    # if pivot splits poorly each time -> depth n -> O(n^2)
 
 
 __all__ = [
